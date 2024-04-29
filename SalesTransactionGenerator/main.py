@@ -30,10 +30,11 @@ def delivery_report(err, msg):
         print(f'Message delivery failed: {err}')
     else:
         print(f"Message delivered to {msg.topic} [{msg.partition()}]")
+
 def main():
     topic = 'financial_transactions'
     producer = SerializingProducer({
-        'bootstrap.servers': '172.19.0.6:9092'  # Change localhost to the IP address of your Kafka broker
+        'bootstrap.servers': 'localhost:9092'  
     })
 
     curr_time = datetime.now()
@@ -52,13 +53,15 @@ def main():
                              )
             producer.poll(0)
 
-            #wait for 5 seconds before sending the next transaction
+            # Wait for 5 seconds before sending the next transaction
             time.sleep(5)
         except BufferError:
             print("Buffer full! Waiting...")
             time.sleep(1)
         except Exception as e:
             print(e)
+    
+    producer.flush()  # Ensure all messages are delivered before exiting
 
 if __name__ == "__main__":
     main()
