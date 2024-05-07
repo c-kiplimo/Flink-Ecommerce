@@ -1,0 +1,9 @@
+
+
+java:S1192µ"dDefine a constant instead of duplicating this literal "total_sales = EXCLUDED.total_sales " 3 times.(›Ãš8ñÁ½ãô1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÈÈ±âşÿÿÿÿ8ôÁ½ãô1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰³Ÿò8©Â½ãô1
+u	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¨ŒîA8ªÂ½ãô1
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¸›¹·ûÿÿÿÿ8ªÂ½ãô1
+g
+java:S1128	"ERemove this unused import 'org.apache.flink.api.connector.sink.Sink'.(åÌ›ïøÿÿÿÿ8ŞÂ½ãô1
